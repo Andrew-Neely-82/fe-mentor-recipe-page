@@ -12,3 +12,19 @@ body {
   background: map-get($colors, Stone-100);
   margin: 0;
 }
+
+.section-title {
+  color: map-get($colors, Brown-800);
+  font-size: 2rem;
+}
+
+.nutrition {
+
+  .nutrition-table {
+    .nutrition-table-set {
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
