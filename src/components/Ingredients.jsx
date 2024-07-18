@@ -8,7 +8,11 @@ const Ingredients = () => {
       <h2 className="section-title">{title}</h2>
       <ul>
         {list.map((el, key) => {
-          return <li key={key}>{el.ingredient}</li>;
+          return (
+            <li key={key}>
+              <span>{el.ingredient}</span>
+            </li>
+          );
         })}
       </ul>
     </section>

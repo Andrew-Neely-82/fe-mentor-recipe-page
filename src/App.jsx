@@ -14,7 +14,9 @@ function App() {
         <Hero />
         <Preparation />
         <Ingredients />
+        <hr />
         <Instructions />
+        <hr />
         <Nutrition />
       </main>
     </>

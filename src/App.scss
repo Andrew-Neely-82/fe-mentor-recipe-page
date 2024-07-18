@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@mixin outfit($weight) {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  line-height: 1.5;
+  color: map-get($colors, Stone-600);
+}
+
+@mixin youngSerif {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: map-get($colors, Brown-800);
+}
+
 $colors: (
   Stone-100: hsl(31, 53%, 90%),
   Stone-150: hsl(30, 18%, 87%),
@@ -9,27 +28,183 @@ $colors: (
 );
 
 body {
+  display: grid;
+  place-content: center;
   background: map-get($colors, Stone-100);
-  margin: 0;
+  @include outfit(400);
+  margin: auto;
+}
+
+hr {
+  @media screen and (max-width: 430px) {
+    margin-inline: 2rem;
+  }
+}
+
+::marker {
+  color: map-get($colors, Rose-800);
+}
+
+.card {
+  max-width: 40rem;
+  background: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-block: 6rem;
+
+  @media screen and (max-width: 430px) {
+    padding: 0;
+    margin-block: 0;
+    border-radius: 0;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+
+    @media screen and (max-width: 430px) {
+      border-radius: 0;
+    }
+  }
+}
+
+section {
+  @media screen and (max-width: 430px) {
+    padding-inline: 2rem;
+  }
 }
 
 .section-title {
   color: map-get($colors, Brown-800);
   font-size: 2rem;
+  @include youngSerif;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 800;
+}
+
+.dark-brown {
+  color: map-get($colors, Brown-800);
+}
+
+.hero {
+  .title {
+    @include youngSerif;
+    font-size: 2.25rem;
+    line-height: 1;
+    color: map-get($colors, Stone-900);
+  }
+}
+
+.preparation {
+  background: map-get($colors, Rose-50);
+  border-radius: 1rem;
+  padding: 1rem 2rem 0.5rem;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 430px) {
+    margin-inline: 2rem;
+  }
+
+  .title {
+    color: map-get($colors, Rose-800);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 430px) {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    padding-left: 0.5rem;
+
+    li {
+      padding-inline: 2rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      list-style: none;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: map-get($colors, Rose-800);
+      }
+    }
+  }
+}
+
+.ingredients {
+  margin-bottom: 2rem;
+
+  ul {
+    padding-left: 0.5rem;
+
+    li {
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      list-style: none;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: map-get($colors, Rose-800);
+      }
+    }
+  }
 }
 
 .instructions {
+  margin-bottom: 2rem;
+
+  ol {
+    padding-left: 1.5rem;
+
+    li {
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+
+      &::marker {
+        color: map-get($colors, Rose-800);
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .nutrition {
+  @media screen and (max-width: 430px) {
+    padding: 2rem;
+  }
+
   .nutrition-table {
+    hr {
+      margin: 0;
+    }
+
     .nutrition-table-set {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      span:first-child {
+        margin-left: 1rem;
+      }
+
+      span {
+        padding: 1rem;
+      }
     }
   }
 }

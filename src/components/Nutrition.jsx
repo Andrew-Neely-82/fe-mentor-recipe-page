@@ -13,9 +13,9 @@ const Nutrition = () => {
           <React.Fragment key={index}>
             <div className="nutrition-table-set">
               <span>{el.type}</span>
-              <span>{el.amount}</span>
+              <span className="bold dark-brown">{el.amount}</span>
             </div>
-            <hr />
+            {index < nutrition.length - 1 && <hr />}
           </React.Fragment>
         ))}
       </div>
