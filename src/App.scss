@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+// Colors
+$colors: (
+  Stone-100: hsl(31, 53%, 90%),
+  Stone-150: hsl(30, 18%, 87%),
+  Stone-600: hsl(30, 10%, 34%),
+  Stone-900: hsl(24, 5%, 18%),
+  Brown-800: hsl(14, 45%, 36%),
+  Rose-800: hsl(332, 51%, 32%),
+  Rose-50: hsl(330, 100%, 98%),
+);
+
+// Mixins
 @mixin outfit($weight) {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
   line-height: 1.5;
   color: map-get($colors, Stone-600);
@@ -17,16 +28,7 @@
   color: map-get($colors, Brown-800);
 }
 
-$colors: (
-  Stone-100: hsl(31, 53%, 90%),
-  Stone-150: hsl(30, 18%, 87%),
-  Stone-600: hsl(30, 10%, 34%),
-  Stone-900: hsl(24, 5%, 18%),
-  Brown-800: hsl(14, 45%, 36%),
-  Rose-800: hsl(332, 51%, 32%),
-  Rose-50: hsl(330, 100%, 98%),
-);
-
+// Global Styles
 body {
   display: grid;
   place-content: center;
@@ -35,16 +37,29 @@ body {
   margin: auto;
 }
 
-hr {
+// Sections
+section {
   @media screen and (max-width: 430px) {
-    margin-inline: 2rem;
+    padding-inline: 2rem;
   }
 }
 
-::marker {
-  color: map-get($colors, Rose-800);
+// Headings and Typography
+.section-title {
+  color: map-get($colors, Brown-800);
+  font-size: 2rem;
+  @include youngSerif;
 }
 
+.bold {
+  font-weight: 800;
+}
+
+.dark-brown {
+  color: map-get($colors, Brown-800);
+}
+
+// Card
 .card {
   max-width: 40rem;
   background: white;
@@ -68,26 +83,7 @@ hr {
   }
 }
 
-section {
-  @media screen and (max-width: 430px) {
-    padding-inline: 2rem;
-  }
-}
-
-.section-title {
-  color: map-get($colors, Brown-800);
-  font-size: 2rem;
-  @include youngSerif;
-}
-
-.bold {
-  font-weight: 800;
-}
-
-.dark-brown {
-  color: map-get($colors, Brown-800);
-}
-
+// Hero Section
 .hero {
   .title {
     @include youngSerif;
@@ -97,6 +93,7 @@ section {
   }
 }
 
+// Preparation Section
 .preparation {
   background: map-get($colors, Rose-50);
   border-radius: 1rem;
@@ -140,6 +137,7 @@ section {
   }
 }
 
+// Ingredients Section
 .ingredients {
   margin-bottom: 2rem;
 
@@ -166,6 +164,7 @@ section {
   }
 }
 
+// Instructions Section
 .instructions {
   margin-bottom: 2rem;
 
@@ -184,9 +183,11 @@ section {
   }
 }
 
+// Nutrition Section
 .nutrition {
   @media screen and (max-width: 430px) {
     padding: 2rem;
+    padding-top: 0;
   }
 
   .nutrition-table {
