@@ -18,11 +18,16 @@ body {
   font-size: 2rem;
 }
 
-.nutrition {
+.bold {
+  font-weight: bold;
+}
 
+.instructions {
+}
+
+.nutrition {
   .nutrition-table {
     .nutrition-table-set {
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
