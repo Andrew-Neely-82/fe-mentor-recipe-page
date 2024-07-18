@@ -1,4 +1,4 @@
-import { nutritionData } from "../../data/data,js";
+import { nutritionData } from "../data/data,js";
 import React from "react";
 
 const Nutrition = () => {

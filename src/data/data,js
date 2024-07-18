@@ -1,3 +1,44 @@
+export const heroData = [
+  {
+    title: "Simple Omelette Recipe",
+    description: "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
+  },
+];
+
+export const preparationData = [
+  {
+    title: "Preparation time",
+    list: [
+      { title: "Total: ", time: "Approximately 10 minutes" },
+      { title: "Preparation: ", time: "5 minutes" },
+      { title: "Cooking: ", time: "5 minutes" },
+    ],
+  },
+];
+
+export const ingredientsData = [
+  {
+    title: "Ingredients",
+    list: [
+      {
+        ingredient: "2-3 large eggs",
+      },
+      {
+        ingredient: "Salt, to taste",
+      },
+      {
+        ingredient: "Pepper, to taste",
+      },
+      {
+        ingredient: "1 tablespoon of butter or oil",
+      },
+      {
+        ingredient: "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
+      },
+    ],
+  },
+];
+
 export const instructionsData = [
   {
     title: "Instructions",

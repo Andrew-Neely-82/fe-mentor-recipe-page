@@ -1,4 +1,4 @@
-import { instructionsData } from "../../data/data,js";
+import { instructionsData } from "../data/data,js";
 
 const Instructions = () => {
   const { title, steps } = instructionsData[0];
