@@ -1,8 +1,8 @@
-import { nutritionData } from "../data/data,js";
+import PropTypes from "prop-types";
 import React from "react";
 
-const Nutrition = () => {
-  const { title, para, nutrition } = nutritionData[0];
+const Nutrition = ({ data }) => {
+  const { title, para, nutrition } = data[0].nutritionData[0];
 
   return (
     <section className="nutrition">
@@ -22,5 +22,7 @@ const Nutrition = () => {
     </section>
   );
 };
+
+Nutrition.propTypes = { data: PropTypes.array.isRequired };
 
 export default Nutrition;

@@ -18,7 +18,7 @@ function App() {
         <hr />
         <Instructions data={recipePageData} />
         <hr />
-        <Nutrition />
+        <Nutrition data={recipePageData} />
       </main>
     </>
   );
