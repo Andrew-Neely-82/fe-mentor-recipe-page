@@ -37,6 +37,13 @@ body {
   margin: auto;
 }
 
+hr {
+  border: 1px solid #00000020;
+  @media screen and (max-width: 430px) {
+    margin-inline: 2rem;
+  }
+}
+
 // Sections
 section {
   @media screen and (max-width: 430px) {
@@ -193,6 +200,10 @@ section {
   .nutrition-table {
     hr {
       margin: 0;
+
+      @media screen and (max-width: 430px) {
+        margin-inline: 0;
+      }
     }
 
     .nutrition-table-set {
