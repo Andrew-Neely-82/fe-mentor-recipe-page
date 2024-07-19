@@ -1,53 +1,3 @@
-export const ingredientsData = [
-  {
-    title: "Ingredients",
-    list: [
-      {
-        ingredient: "2-3 large eggs",
-      },
-      {
-        ingredient: "Salt, to taste",
-      },
-      {
-        ingredient: "Pepper, to taste",
-      },
-      {
-        ingredient: "1 tablespoon of butter or oil",
-      },
-      {
-        ingredient: "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
-      },
-    ],
-  },
-];
-
-export const instructionsData = [
-  {
-    title: "Instructions",
-    steps: [
-      { step: "Beat the eggs", instruction: "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture." },
-      { step: "Heat the pan", instruction: "Place a non-stick frying pan over medium heat and add butter or oil." },
-      { step: "Cook the omelette", instruction: "Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface." },
-      { step: "Add fillings (optional)", instruction: "When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette." },
-      { step: "Fold and serve", instruction: "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate." },
-      { step: "Enjoy", instruction: "Serve hot, with additional salt and pepper if needed." },
-    ],
-  },
-];
-
-export const nutritionData = [
-  {
-    title: "Nutrition",
-    para: "The table below shows nutritional values per serving without the additional fillings.",
-    nutrition: [
-      { type: "Calories", amount: "277kcal" },
-      { type: "Carbs", amount: "0g" },
-      { type: "Protein", amount: "20g" },
-      { type: "Fat", amount: "22g" },
-    ],
-  },
-];
-
 export const recipePageData = [
   {
     heroData: [
@@ -70,21 +20,12 @@ export const recipePageData = [
       {
         title: "Ingredients",
         list: [
-          {
-            ingredient: "2-3 large eggs",
-          },
-          {
-            ingredient: "Salt, to taste",
-          },
-          {
-            ingredient: "Pepper, to taste",
-          },
-          {
-            ingredient: "1 tablespoon of butter or oil",
-          },
-          {
-            ingredient: "Optional fillings: cheese, diced vegetables, cooked meats, herbs",
-          },
+          // prettier-ignore
+          { ingredient: "2-3 large eggs" },
+          { ingredient: "Salt, to taste" },
+          { ingredient: "Pepper, to taste" },
+          { ingredient: "1 tablespoon of butter or oil" },
+          { ingredient: "Optional fillings: cheese, diced vegetables, cooked meats, herbs" },
         ],
       },
     ],
