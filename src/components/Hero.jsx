@@ -1,7 +1,8 @@
-import { heroData } from "../data/data,js";
+import PropTypes from "prop-types";
 
-const Hero = () => {
-  const { title, description } = heroData[0];
+const Hero = ({ data }) => {
+  const { title, description } = data[0].heroData[0];
+
   return (
     <section className="hero">
       <h1 className="title">{title}</h1>
@@ -9,4 +10,7 @@ const Hero = () => {
     </section>
   );
 };
+
+Hero.propTypes = { data: PropTypes.array.isRequired };
+
 export default Hero;

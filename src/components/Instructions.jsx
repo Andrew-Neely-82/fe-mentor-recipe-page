@@ -1,7 +1,8 @@
-import { instructionsData } from "../data/data,js";
+import PropTypes from "prop-types";
 
-const Instructions = () => {
-  const { title, steps } = instructionsData[0];
+const Instructions = ({ data }) => {
+  const { title, steps } = data[0].instructionsData[0];
+
   return (
     <section className="instructions">
       <h2 className="section-title">{title}</h2>
@@ -18,4 +19,7 @@ const Instructions = () => {
     </section>
   );
 };
+
+Instructions.propTypes = { data: PropTypes.array.isRequired };
+
 export default Instructions;

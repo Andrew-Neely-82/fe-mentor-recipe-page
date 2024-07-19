@@ -1,7 +1,7 @@
-import { preparationData } from "../data/data,js";
+import PropTypes from "prop-types";
 
-const Preparation = () => {
-  const { title, list } = preparationData[0];
+const Preparation = ({ data }) => {
+  const { title, list } = data[0].preparationData[0];
 
   return (
     <section className="preparation">
@@ -19,4 +19,7 @@ const Preparation = () => {
     </section>
   );
 };
+
+Preparation.propTypes = { data: PropTypes.array.isRequired };
+
 export default Preparation;
